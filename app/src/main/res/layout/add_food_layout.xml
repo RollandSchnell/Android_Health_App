@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:text="Search for foods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchLabel"
+        android:textColor="@color/textColor"
+        android:textSize="22dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/searchInput" />
+
+    <Button
+        android:text="Done"
+        android:layout_width="150px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/doneButton"
+        android:background="@drawable/shape"
+        android:onClick="onDone"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="368dp"
+        android:id="@+id/searchList" />
+</LinearLayout>

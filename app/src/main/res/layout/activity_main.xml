@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background"
+    tools:context="com.health.health_app.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:id="@+id/labels"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Show Foods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodsLabel"
+            android:textColor="@color/textColor"
+            android:textSize="22dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Add Food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addFoodLabel"
+            android:textSize="22dp"
+            android:textColor="@color/textColor"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Clear list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearFood"
+            android:textSize="22dp"
+            android:textColor="@color/textColor"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:id="@+id/buttons"
+        android:layout_below="@+id/labels"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="Show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/showButton"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/shape"
+            android:onClick="onShow">
+
+        </Button>
+
+        <Button
+            android:text="Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addButton"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginRight="5dp"
+            android:onClick="onAdd"/>
+
+        <Button
+            android:text="Clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearButton"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginRight="5dp"
+            android:onClick="onClear"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:id="@+id/outputResult"
+        android:weightSum="1"
+        android:layout_below="@+id/buttons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="79dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultLabels">
+
+            <TextView
+                android:text="Carbs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/carbLabel"
+                android:textSize="25dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Protein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/proteinLabel"
+                android:textSize="25dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Fat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fatLabel"
+                android:textSize="25dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Calorie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/calorieLabel"
+                android:textSize="25dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:id="@+id/results"
+            android:layout_weight="0.34">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/carbOutput"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/proteinOutput"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fatOutput"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/calorieOutput"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1"
+                android:text="0" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:text="Show Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalButton"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:width="200dp"
+        android:background="@drawable/shape"
+        android:onClick="onTotal"
+        android:layout_below="@+id/buttons"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
